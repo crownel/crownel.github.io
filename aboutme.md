@@ -1,7 +1,7 @@
 ---
 layout: page
 title: How To
-subtitle:  페이지 만들기
+subtitle:  암호화 페이지 만들기
 ---
 
 [Pagecrypt](https://www.maxlaumeister.com/pagecrypt/)
