@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: post
 title: 공지 사항
 subtitle: 로그 백업 이용 공지 사항
 tags: [notice]
