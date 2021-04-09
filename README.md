@@ -1,4 +1,4 @@
-# Github Page, Jekyll을 이용해 Trpg 로그 백업용 블로그 만들기
+# Trpg 로그 백업용 블로그 만들기
 **feat. Beautiful Jekyll**
 
 본 내용은 Beautiful Jekyll 테마를 이용하여 만들고 있습니다.
