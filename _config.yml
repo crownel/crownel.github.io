@@ -13,8 +13,10 @@ author: 이름
 # --- 상단에 표시될 메뉴 이름들 --- #
 
 navbar-links:
-  How To: "aboutme" # 이렇게 마크다운 문서를 보여줄 수도 있고 (이 때 .md는 뺀 제목만 씁니다)
+  About: "aboutme" # 이렇게 마크다운 문서를 보여줄 수도 있고 (이 때 .md는 뺀 제목만 씁니다)
   Postype: "https://postype.com/" # 이렇게 외부 링크로 이어지게 할 수도 있습니다.
+  Links: 
+    - Learn markdown: "https://www.markdowntutorial.com/" # 이렇게 드롭다운 메뉴를 만들 수도 있습니다.
 
 # --- 로고 --- #
 
