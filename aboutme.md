@@ -1,11 +1,12 @@
 ---
 layout: page
-title: How To
-subtitle:  암호화 페이지 만들기
+title: About me
+subtitle:  자기소개 페이지
 ---
 
-[Pagecrypt](https://www.maxlaumeister.com/pagecrypt/)
+자기소개 페이지입니다.
 
-여기에 들어가서 html 파일과 비밀번호 입력 후 첨부하면 암호화된 html 파일이 나온다.
-암호화된 html 파일을 첨부하면 끝!
+역시 마크다운 문법으로 작성합니다.
+
+문서를 수정하거나 삭제해주세요. 
 
