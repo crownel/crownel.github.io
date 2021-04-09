@@ -36,10 +36,10 @@ round-avatar: true
 # 사용하지 않으려면 코드 앞쪽에 '#' 을 붙이고 띄어쓰기 해주세요.
 # 사용하려면 반대로 # 을 지워주세요.
 social-network-links:
- # email: "youremail@gmail.com"
+ email: "youremail@gmail.com"
  # facebook: deanattali
  # github: daattali
- # twitter: yourtwitterid
+ twitter: yourtwitterid
  # patreon: DeanAttali
  # youtube: c/daattali
 #  medium: yourname
