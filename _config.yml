@@ -5,16 +5,16 @@
 # --- 필수 설정--- #
 
 # 웹사이트 이름
-title: 제목
+title: 10톤 별몽둥이
 
 # 사이트에 표시 될 닉네임
-author: 이름 
+author: Crownel
 
 # --- 상단에 표시될 메뉴 이름들 --- #
 
 navbar-links:
   About: "aboutme" # 이렇게 마크다운 문서를 보여줄 수도 있고 (이 때 .md는 뺀 제목만 씁니다)
-  Postype: "https://postype.com/" # 이렇게 외부 링크로 이어지게 할 수도 있습니다.
+  Postype: "https://crownel.postype.com/" # 이렇게 외부 링크로 이어지게 할 수도 있습니다.
   Links: 
     - Learn markdown: "https://www.markdowntutorial.com/" # 이렇게 드롭다운 메뉴를 만들 수도 있습니다.
 
@@ -38,10 +38,10 @@ round-avatar: true
 # 사용하지 않으려면 코드 앞쪽에 '#' 을 붙이고 띄어쓰기 해주세요.
 # 사용하려면 반대로 # 을 지워주세요.
 social-network-links:
- email: "youremail@gmail.com"
+ email: "jbblily703@gmail.com"
  # facebook: deanattali
  # github: daattali
- twitter: yourtwitterid
+ twitter: TR_crownel
  # patreon: DeanAttali
  # youtube: c/daattali
 #  medium: yourname
@@ -76,7 +76,7 @@ share-links-active:
 
 # 웹사이트 링크를 사이트 하단에 어떻게 표시할지 설정합니다.
 # 필요 없다면 아래 문장을 한 줄 지워주세요.
-url-pretty: "Yourname.com"
+url-pretty: "Crownel.com"
 
 # --------- 이 아래로는 관련 지식이 없다면 절대 변경하지 마세요. -----------
 
