@@ -1,6 +1,6 @@
 ---
 layout: minimal
-permalink: /hidden_testlog/
+permalink: /encrypted_hidden/
 draft: true
 ---
 
