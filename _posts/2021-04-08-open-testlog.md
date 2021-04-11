@@ -21,6 +21,6 @@ permalink: /open_testlog/
 
 비밀번호 : test
 
-- [암호화 로그 보기](https://jbblily.github.io/encrypted_hidden/)
+- [암호화 로그 보기](https://crownel.github.io/encrypted_hidden/)
 
 {% include_relative testlog.html %}
