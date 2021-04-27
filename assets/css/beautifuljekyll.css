@@ -468,7 +468,7 @@ footer .footer-custom-content {
   color: #808080;
   font-size: 1.125rem;
   margin: 0 0 0.625rem;
-  font-family: 'Noto Sans KR','Times New Roman', serif;
+  font-family: 'Noto Sans KR', Helvetica, Arial, sans-serif;
 }
 .post-heading .post-meta {
   display: inline-block;
