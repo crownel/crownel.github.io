@@ -473,6 +473,7 @@ footer .footer-custom-content {
 }
 .post-heading .post-meta {
   display: inline-block;
+  font-family: 'Noto Sans KR', 'Times New Roman', serif;
 }
 @media (max-width: 767px) {
   .post-heading .post-meta {
