@@ -22,7 +22,6 @@ body {
   {% endif %}
 }
 p {
-  font-family: 'Nanum Myeonjo', 'Times New Roman', serif;
   line-height: 1.5;
   margin: 1.875rem 0;
 }
