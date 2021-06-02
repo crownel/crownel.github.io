@@ -1020,9 +1020,15 @@ pre {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 /* Search bar */
 #beautifuljekyll-search-overlay {
   font-family: var(--header-font);
+=======
+
+/* Search bar */
+#beautifuljekyll-search-overlay {
+>>>>>>> a8238d1 (Update beautifuljekyll.css)
   display: none;
   z-index: 999999;
   position: fixed;
@@ -1034,7 +1040,10 @@ pre {
   text-align: center;
   padding: 1rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a8238d1 (Update beautifuljekyll.css)
 #nav-search-exit {
   position: absolute;
   top: 1.5rem;
@@ -1063,7 +1072,10 @@ pre {
   border: none;
   padding: 0 3rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a8238d1 (Update beautifuljekyll.css)
 @media (max-width: 1199px) {
   #nav-search-input {
     width: 75%;
