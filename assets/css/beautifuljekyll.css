@@ -22,13 +22,13 @@ body {
   {% endif %}
 }
 p {
-  font-family:'Gowun Batang', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.5;
   margin: 1.875rem 0;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Noto Sans KR', 'Open Sans', sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
 }
 h1 {
@@ -190,7 +190,7 @@ img {
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
-  font-weight: 800;
+  font-weight: 700;
   color: {{ site.navbar-text-col | default: "#404040" }};
 }
 
@@ -470,7 +470,7 @@ footer .footer-custom-content {
   font-size: 1.125rem;
   font-style: italic;
   margin: 0 0 0.625rem;
-  font-family: 'Noto Sans KR','Times New Roman', serif;
+  font-family: 'Times New Roman', serif;
 }
 .post-heading .post-meta {
   display: inline-block;
@@ -486,6 +486,8 @@ footer .footer-custom-content {
 }
 .post-preview .post-entry {
   width: 100%;
+  font-size: 1rem;
+  color: #708090;
 }
 .post-preview .post-image {
   float: right;
@@ -535,7 +537,7 @@ footer .footer-custom-content {
 }
 
 .post-preview .post-read-more {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
