@@ -39,9 +39,9 @@ layout: base
         </div>
       {% endif %}
 
-      <div class="blog-post">
-        {{ content }}
-      </div>
+      <article role="main" class="blog-post">
+          {{ content }}
+      </article>
 
       {% if page.tags.size > 0 %}
         <div class="blog-tags">
