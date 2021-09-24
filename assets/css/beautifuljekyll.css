@@ -7,7 +7,8 @@ layout: null
 /* --- General --- */
 
 html {
-  font-size: 100%
+  font-size: 100%;
+  word-break: keep-all;
 }
 
 body {
