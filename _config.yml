@@ -15,7 +15,6 @@ author: Crownel
 navbar-links:
   About: "aboutme" # 이렇게 마크다운 문서를 보여줄 수도 있고 (이 때 .md는 뺀 제목만 씁니다)
   Postype: "https://crownel.postype.com/"
-  FVTT: "https://main.fvttcrownel.kro.kr/"
   Links: 
     - Booth: "https://crownel.booth.pm/"
     - Pixiv: "https://www.pixiv.net/users/12526241"
@@ -42,7 +41,7 @@ round-avatar: true
 social-network-links:
  email: "jbblily703@gmail.com"
  # facebook: deanattali
- # github: daattali
+ github: jbblily
  twitter: TR_crownel
  # patreon: DeanAttali
  # youtube: c/daattali
