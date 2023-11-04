@@ -59,7 +59,7 @@ social-network-links:
 #  yelp: yourname
 #  telegram: yourname
 #  calendly: yourname
-#  mastodon: instance.url/@username
+  mastodon: trpg-o.xyz/@tr_crownel
 #  ORCID: your ORCID ID
 #  google-scholar: your google scholar
 
@@ -77,7 +77,7 @@ share-links-active:
 
 # 웹사이트 링크를 사이트 하단에 어떻게 표시할지 설정합니다.
 # 필요 없다면 아래 문장을 한 줄 지워주세요.
-# url-pretty: "Home"
+url-pretty: "홈으로"
 
 # --------- 이 아래로는 관련 지식이 없다면 절대 변경하지 마세요. -----------
 
