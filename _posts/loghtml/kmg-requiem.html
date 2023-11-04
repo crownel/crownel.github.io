@@ -37,6 +37,7 @@
         <input type="checkbox" id="dummy" class="none">
         <summary></summary>
         <div class="itemToggleMenu thisOn" id="toggle1">표시전환</div>
+        <div class="itemToggleMenu" id="toggle2">다이스 출력</div>
         <!-- 見出しなし -->
         <div class="showMenuContents" name="toggle1">
         <h2><i class="fa-solid fa-comment-dots"></i> 탭 별</h2>
@@ -72,6 +73,36 @@
         <input type="checkbox" name="mem" id="mem16" checked><label for="mem16">백아</label><br>
         <input type="checkbox" name="mem" id="mem17" checked><label for="mem17">백아(白牙)</label><br>
         </form>
+        </div>
+        <div class="showMenuContents" style="display:none;" name="toggle2">
+        <h2><i class="fa-solid fa-dice"></i> 다이스 출력</h2><br>
+        <ul>
+            <li><buttun type="button" class="dice" id="all">ダイス一括表示</buttun></li>
+            <li><buttun type="button" class="dice" id="scs">成功のみ表示</buttun></li>
+            <li><buttun type="button" class="dice" id="fail">失敗のみ表示</buttun></li>
+            <li><buttun type="button" class="dice" id="cf">CF表示</buttun></li>
+        </ul>
+        <div id="dice-area" class="none">
+            output
+        </div>
+        <div id="cf-area" class="none">
+            cf output
+        </div>
+        <i class="fa-regular fa-copy none"></i>
+        <buttun type="button" onclick="$('#dice-area,#cf-area,.fa-copy').addClass('none');" style="cursor:pointer;display:block;margin:20px 10px 20px;">
+            <i class="fa-solid fa-arrow-rotate-right"></i> ダイス出力リセット
+        </buttun>
+        <span style="color:#888;font-size:small;">
+            ※CoC6판 만<br>
+            ※1D100/CC/CCBで成否判定のあるダイス結果のみ対応<br>
+            ※表示チェックのついているタブ・発言者のみ出力<br>
+            ※Tekeyログの場合動作保証なし<br>
+            <br>
+        </span>
+        <br>
+        </div>
+        <div class="showMenuContents" style="display:none;" name="toggle3">
+        <!-- 見出しなし -->
         </div>
         <br><br>
         <a href="#"><i class="fa-solid fa-angles-up"></i> 로그 맨 위로</a>
