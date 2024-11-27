@@ -5,4 +5,4 @@ subtitle: 요타, 쿤, 르세, 반찬 (GM 크로넬)
 tags: [카미가카리,로그]
 ---
 
-{% include_relative loghtml/Dont_wanna_forget you.html %}
+{% include_relative loghtml/Dont_wanna_forget_you.html %}
