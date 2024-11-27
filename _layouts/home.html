@@ -9,22 +9,23 @@ layout: page
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
-  <li class="post-preview">
+    {% unless post.draft %}
+      <li class="post-preview">
     <article>
 
-      {%- capture thumbnail -%}
-        {% if post.thumbnail-img %}
-          {{ post.thumbnail-img }}
-        {% elsif post.cover-img %}
-          {% if post.cover-img.first %}
-            {{ post.cover-img[0].first.first }}
+        {%- capture thumbnail -%}
+          {% if post.thumbnail-img %}
+            {{ post.thumbnail-img }}
+          {% elsif post.cover-img %}
+            {% if post.cover-img.first %}
+              {{ post.cover-img[0].first.first }}
+            {% else %}
+              {{ post.cover-img }}
+            {% endif %}
           {% else %}
-            {{ post.cover-img }}
           {% endif %}
-        {% else %}
-        {% endif %}
-      {% endcapture %}
-      {% assign thumbnail=thumbnail | strip %}
+        {% endcapture %}
+        {% assign thumbnail=thumbnail | strip %}
 
       {% if site.feed_show_excerpt == false %}
       {% if thumbnail != "" %}
@@ -95,8 +96,9 @@ layout: page
       </div>
       {% endif %}
 
-    </article>
+       </article>
   </li>
+    {% endunless %}
   {% endfor %}
 </ul>
 

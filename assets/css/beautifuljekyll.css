@@ -19,7 +19,7 @@ layout: null
   --footer-hover-col: {{ site.footer-hover-col | default: "#0085A1" }};
 
   /* common CSS variables */
-  --body-font: 'Noto Sans KR', 'Times New Roman', serif;
+  --body-font: 'Noto Sans KR', 'Lora', 'Times New Roman', serif;
   --header-font: 'Open Sans', 'Noto Sans KR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --mid-col: #808080;
 }
@@ -50,13 +50,12 @@ body > main {
   flex: 1;
 }
 p {
-  font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.5;
   margin: 1.875rem 0;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: var(--header-font);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.1;
 }
 h1 {
@@ -219,8 +218,8 @@ img {
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
-  font-weight: 700;
-  color: {{ site.navbar-text-col | default: "#404040" }};
+  font-weight: 800;
+  color: var(--navbar-text-col);
 }
 
 .navbar-toggler {
@@ -540,8 +539,6 @@ footer .footer-custom-content {
 }
 .post-preview .post-entry {
   width: 100%;
-  font-size: 1rem;
-  color: #708090;
 }
 .post-preview .post-image {
   float: right;
@@ -591,7 +588,7 @@ footer .footer-custom-content {
 }
 
 .post-preview .post-read-more {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 @media (min-width: 768px) {
@@ -1024,15 +1021,9 @@ pre {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 /* Search bar */
 #beautifuljekyll-search-overlay {
   font-family: var(--header-font);
-=======
-
-/* Search bar */
-#beautifuljekyll-search-overlay {
->>>>>>> a8238d1 (Update beautifuljekyll.css)
   display: none;
   z-index: 999999;
   position: fixed;
@@ -1044,10 +1035,7 @@ pre {
   text-align: center;
   padding: 1rem;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> a8238d1 (Update beautifuljekyll.css)
 #nav-search-exit {
   position: absolute;
   top: 1.5rem;
@@ -1076,10 +1064,7 @@ pre {
   border: none;
   padding: 0 3rem;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> a8238d1 (Update beautifuljekyll.css)
 @media (max-width: 1199px) {
   #nav-search-input {
     width: 75%;
