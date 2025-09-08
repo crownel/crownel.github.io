@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>테스트용</title>
+<style type="text/css">
+
+* { box-sizing: border-box; }
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 0.9rem;
+	color: #666;
+}
+header {
+	margin: 0;
+	background: #fff;
+	width: 100%;
+	position:fixed;
+	border-bottom: 1px solid #999;
+	padding: 6px 0;
+	color: #8A8A8A;
+}
+main { display: flex; margin: 0 auto; }
+#text { width: 1100px; margin: 50px auto 0; }
+footer { margin: 10px; height: 20px; font-size: 0.7rem;  text-align: right;}
+footer a { color: #aaa; text-decoration: none;}
+footer a:hover { color: #999 }
+
+h2 {
+	font-size: 0.9rem;
+	margin: 20px 0 8px 0;
+	border-left: 5px solid #000;
+	padding-left: 10px;
+}
+.nameList h2 { margin-top: 50px; }
+
+input[type=checkbox] {
+	transform: scale(1.3);
+	margin: 10px 8px 10px 3px;
+}
+dl {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #e0e0e0;
+	margin: 0;
+}
+dt {
+	width: 18%;
+	padding: 0 10px 0 10px;
+	margin: 5px 0 5px 0;
+	font-size: 0.75rem;
+	text-align: right;
+	display: block;
+	border-right: dotted 1px #888;
+}
+dd {
+	width: 80%;
+	padding: 0 5px 0 10px;
+	margin: 5px 0 5px 0;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+.tab {
+	border-top: 1px solid #e0e0e0;
+	z-index: -1;
+	text-align: right;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-top: -1px;
+	position: relative;
+}
+.tab span {
+	display: inline-block;
+	border-bottom: 1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+	background: #f0f0f0;
+	font-size: 0.75rem;
+	color: #666;
+	padding: 2px 6px 0 8px;
+	border-radius: 0 0 0 12px;
+	margin-top: -1px;
+}
+
+/*------------------------------
+ ハンバーガーメニュー        -*/
+
+header .hcenter {
+	max-width: 1200px;
+	display: flex;
+	margin: 0 10px;
+}
+header h1 {
+	order: 2;
+	margin: 5px 0 0 80px;
+	padding-top: 2px;
+	padding-left:10px;
+	border-left: 6px solid;
+	height: 18px;
+	line-height: 1;
+	font-size: 1.1rem;
+}
+.drawer-hidden { display: none; }
+.drawer { order: 1; }
+.drawer-open {
+	display: flex;
+	height: 28px;
+	width: 26px;
+	align-items: center;
+	position: relative;
+	z-index: 100;
+	cursor: pointer;
+	color: #8A8A8A;
+}
+.drawer-open .menusub {
+	padding-left: 32px;
+	padding-top: 2px;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.drawer-open span.menubtn,
+.drawer-open span.menubtn:before,
+.drawer-open span.menubtn:after {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 25px;
+	border-radius: 3px;
+	background: #8A8A8A;
+	transition: 0.5s;
+	position: absolute;
+	margin: 0 0 0 auto;
+	text-align: right;
+}
+
+/* アイコン */
+.drawer-open span.menubtn:before { bottom: 8px;}
+.drawer-open span.menubtn:after { top: 8px;}
+#drawer-check:checked ~ .drawer-open span.menubtn {
+	background: rgba(255, 255, 255, 0);
+}
+#drawer-check:checked ~ .drawer-open span.menubtn::before {
+	bottom: 0;
+	transform: rotate(45deg);
+}
+#drawer-check:checked ~ .drawer-open span.menubtn::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+/* 中身 */
+.drawer-content {
+	width: 280px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -280px;
+	z-index: 99;
+	background: rgba(0,0,0,0.75);
+	transition: all .3s;
+	padding-left: 23px;
+	padding-top: 80px;
+	color: #fff;
+	overflow-y: auto;
+}
+#drawer-check:checked ~ .drawer-content {
+	left: 0;
+}
+.drawer-content ul { padding-left:0; }
+.drawer-content ul li { list-style:none; }
+
+
+/*------------------------------
+ 個別設定
+------------------------------*/
+.tc0 { background-color: rgb(255, 255, 255)}
+.tc1 { background-color: rgb(240, 240, 240); margin-left: 10%; font-size: 0.8rem}
+.tc2 { background-color: rgb(255, 255, 255)}
+.tc4 { background-color: rgb(255, 233, 233); margin-left: 10%}
+.tc5 { background-color: rgb(236, 255, 226); margin-left: 10%}
+.nc0 dt { color: rgb(136, 136, 136) }  /*  */
+.nc1 dt { color: rgb(233, 30, 99) }  /* 가나 */
+.nc2 dt { color: rgb(234, 103, 44) }  /* GM */
+.nc3 dt { color: rgb(233, 30, 99) }  /* 가나 */
+.nc4 dt { color: rgb(10, 4, 168) }  /* 테스트 */
+.nc5 dt { color: rgb(150, 195, 23) }  /* 팽 */
+.nc6 dt { color: rgb(15, 189, 81) }  /* test */
+
+
+.C, .S, .SU, .SP { color: #2196F3; }
+.F, .FA { color: #F50057; }
+
+/*------------------------------
+ レスポンシブ
+------------------------------*/
+@media screen and (max-width:1100px) {
+	#list { display: none; }
+	#text { width: 90%; }
+}
+
+@media screen and (max-width:810px) {
+	body { font-size: 0.85rem; }
+	#list { display: none; }
+	#text { width: 100%; padding: 0 5px; }
+	header h1 { font-size: 1rem; margin-left: 10px; padding-left: 0; border-left: 0; padding-top: 4px; }
+	.drawer-open .menusub { display: none; }
+}
+
+</style>
+</head>
+<body>
+<header>
+	<div class="hcenter">
+		<h1>테스트용</h1>
+		<div class="drawer">
+			<input type="checkbox" id="drawer-check" class="drawer-hidden">
+			<label for="drawer-check" class="drawer-open">
+				<span class="menusub">MENU</span>
+				<span class="menubtn"></span>
+			</label>
+			<setction class="drawer-content">
+				<form autocomplete="off">
+					<div class="tabList">
+						<h2>タブ</h2>
+						<ul>
+							<li><label><input id=tc0 class="select_t" type="checkbox" checked>메인</li></label>
+							<li><label><input id=tc1 class="select_t" type="checkbox" checked>잡담</li></label>
+							<li><label><input id=tc2 class="select_t" type="checkbox" checked>정보</li></label>
+							<li><label><input id=tc4 class="select_t" type="checkbox" checked>익1</li></label>
+							<li><label><input id=tc5 class="select_t" type="checkbox" checked>익2</li></label>
+
+						</ul>
+					</div>
+					<div class="nameList">
+						<h2>発言者</h2>
+						<ul>
+							<li style ="color:rgb(136, 136, 136);"><label><input id="nc0" class="select_n" type="checkbox" checked></li></label>
+							<li style ="color:rgb(233, 30, 99);"><label><input id="nc1" class="select_n" type="checkbox" checked>가나</li></label>
+							<li style ="color:rgb(234, 103, 44);"><label><input id="nc2" class="select_n" type="checkbox" checked>GM</li></label>
+							<li style ="color:rgb(233, 30, 99);"><label><input id="nc3" class="select_n" type="checkbox" checked>가나</li></label>
+							<li style ="color:rgb(10, 4, 168);"><label><input id="nc4" class="select_n" type="checkbox" checked>테스트</li></label>
+							<li style ="color:rgb(150, 195, 23);"><label><input id="nc5" class="select_n" type="checkbox" checked>팽</li></label>
+							<li style ="color:rgb(15, 189, 81);"><label><input id="nc6" class="select_n" type="checkbox" checked>test</li></label>
+
+						</ul>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+</header>
+
+<main>
+<section id="text">
+	<p class="tc0 tab"><span>메인</span></p>
+	<dl class="tc0 nc0"><dt></dt><dd>메인 메인메인</dd></dl>
+	<p class="tc1 tab"><span>잡담</span></p>
+	<dl class="tc1 nc1"><dt>가나</dt><dd>잡담잡담</dd></dl>
+	<p class="tc2 tab"><span>정보</span></p>
+	<dl class="tc2 nc2"><dt>GM</dt><dd>정보입니다</dd></dl>
+	<dl class="tc2 nc3"><dt>가나</dt><dd>빨강빨강</dd></dl>
+	<p class="tc1 tab"><span>잡담</span></p>
+	<dl class="tc1 nc4"><dt>테스트</dt><dd>귓말 테스트 하러 왔슈</dd></dl>
+	<p class="tc0 tab"><span>메인</span></p>
+	<dl class="tc0 nc4"><dt>테스트</dt><dd>2d6 (2D6) ＞ 3[1,2] ＞ 3</dd></dl>
+	<dl class="tc0 nc4"><dt>테스트</dt><dd>실화냐</dd></dl>
+	<p class="tc4 tab"><span>익1</span></p>
+	<dl class="tc4 nc2"><dt>GM</dt><dd>아야어여</dd></dl>
+	<p class="tc0 tab"><span>메인</span></p>
+	<dl class="tc0 nc5"><dt>팽</dt><dd>식칼달팽이 분신술</dd></dl>
+	<p class="tc4 tab"><span>익1</span></p>
+	<dl class="tc4 nc2"><dt>GM</dt><dd>소근소근</dd></dl>
+	<dl class="tc4 nc5"><dt>팽</dt><dd>ㅇㅋ</dd></dl>
+	<p class="tc0 tab"><span>메인</span></p>
+	<dl class="tc0 nc6"><dt>test</dt><dd>룰루랄라</dd></dl>
+	<dl class="tc0 nc6"><dt>test</dt><dd>ㅇㄴㄹㄴㅇㄹ</dd></dl>
+	<p class="tc5 tab"><span>익2</span></p>
+	<dl class="tc5 nc2"><dt>GM</dt><dd>님한테도 귓말을 넣어보겠음</dd></dl>
+
+</section>
+</main>
+<footer><a href="https://box.tetronomo.com/ccfc/" target="_blank">CCFOLIAログコンバータ Ver1.25</a></footer>
+<script type="text/javascript">
+const tab = [];
+const name = [];
+const trigger = document.querySelectorAll(".select_t");
+trigger.forEach(function(target) {
+	target.addEventListener('change', function() {
+		const classname = target.id;
+		const id = classname.split("tc");
+		tab[id[1]] = target.checked ? '' : 'none';
+		const tid = tab[id[1]];
+		const arr = document.querySelectorAll("." + classname);
+		arr.forEach(function(value) {
+			const string = value.className;
+			let temp = "";
+			let nid = "";
+			if(string.match('nc')) {
+				temp = string.split("nc");
+				nid = temp[1].substring(0,1);
+			}
+			if(tid == 'none') {
+				value.style.display = 'none';
+			} else {
+				if(name[nid] == 'none') {
+					value.style.display = 'none';
+				} else {
+					value.style.display = '';
+				}
+			}
+		});
+	});
+});
+const triggern = document.querySelectorAll(".select_n");
+triggern.forEach(function(target) {
+	target.addEventListener('change', function() {
+		const classname = target.id;
+		const id = classname.split("nc");
+		name[id[1]] = target.checked ? '' : 'none';
+		const nid = name[id[1]];
+		const arr = document.querySelectorAll("." + classname);
+		arr.forEach(function(value) {
+			const string = value.className;
+			const temp = string.split("tc");
+			const tid = temp[1].substring(0,1);
+			if(tab[tid] == 'none') {
+				value.style.display = 'none';
+			} else {
+				if(nid == 'none') {
+					value.style.display = 'none';
+				} else {
+					value.style.display = '';
+				}
+			}
+		});
+	});
+});
+</script>
+</body>
+</html>
