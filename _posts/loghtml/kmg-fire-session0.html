@@ -7,9 +7,12 @@
 <style>*{font-family:sans-serif;}:root{--header-back:0,0,0;--header-color:#FFF;--awesome:'Font Awesome 5 Free';}body{padding-top:80px;margin:0;}/* header */header{background:rgba(var(--header-back),0.5);color:var(--header-color);position:fixed;top:0;left:0;width:100%;overflow-x:hidden;transition:0.3s;}header:has(#menu[open]){background:rgba(var(--header-back),0.8);}summary{outline:none;}details > summary{display:inline-block;cursor:pointer;opacity:0.3;font-size:110%;font-weight:bold;padding:5px;margin:10px 0 0;}details > summary:hover,details[open] > summary{opacity:1;}details[open] > summary:hover{opacity:0.3;}details > summary:before{content:'\f138';font-family:var(--awesome);font-weight:600;margin-right:0.5em;}details[open] > summary:before{content:'\f13a';font-family:var(--awesome);font-weight:600;margin-right:0.5em;}details > div{margin:10px 10px 30px 20px;word-break:break-all;}details > div > button{padding:3px 20px;margin:0 0 8px;font-size:105%;cursor:pointer;outline:none;border:2px solid var(--header-color);border-radius:3px;background:rgba(0,0,0,0);color:var(--header-color);opacity:0.3;}details > div > button:hover{opacity:1;}button.all.hide:before{content:'일괄 숨김';}button.all.hide:after{content:'\f070';font-family:var(--awesome);font-weight:600;margin-left:0.5em;}button.all.show:before{content:'일괄 표시';}button.all.show:after{content:'\f06e';font-family:var(--awesome);font-weight:600;margin-left:0.5em;}input[type="checkbox"]{display:none;}label{cursor:pointer;}input[type="checkbox"]+ label:before{content:'\f0c8';font-family:var(--awesome);font-weight:400;margin-right:0.5em;}input[type="checkbox"]:checked + label:before{content:'\f14a';font-family:var(--awesome);font-weight:600;margin-right:0.5em;}#menu[open]{max-height:85vh;}#menu > summary{padding:0 10px 10px;}#menu[open] > summary{opacity:0.3;}#menu[open] > summary:hover{opacity:1;}#menu > summary:before{content:'\f0c9';font-family:var(--awesome);font-weight:600;margin-right:0.5em;}#menu > summary:after{content:'MENU';}#menu[open] > summary:before{content:'\f00d';font-family:var(--awesome);font-weight:600;margin-right:0.5em;}#menu[open] > summary:after{content:'CLOSE';}#menu > div{max-height:60vh;max-width:80vw;padding-bottom:50px;overflow-y: auto;}#menu > div::-webkit-scrollbar{display:none;}header a:link,header a:visited{color:var(--header-color);opacity:0.5;text-decoration: none;}header a:hover{opacity:1;}/* chat-log default style */#chat-log{margin:20px 0 20px 25px;}.chat{display:flex;flex-wrap:nowrap;flex-direction:column;padding-right:1em;}.chat > div{word-break:break-all;}.chat > div:nth-child(1){display:block;font-weight:bold;padding-top:0.2em;}.chat > div:nth-child(2){margin-left:1em;padding:0 0.2em 0.2em;}/* headline */[id^="index"]{margin-top:-90px;padding-top:90px;}/* hide-user style */.hide-user > div:nth-child(1),.hide-user2 > div:nth-child(1){display: none !important;}.hide-user > div:nth-child(2):not(:has(b)){margin-left:0;padding:0;}.hide-user + div:not(:has(.hide-user)){padding-bottom:0.5em;}.hide-user b,.hide-user2 b{ margin-left:-1.2em; }/* tab style */body{background:#ffffff;}.tab1{margin-left:1em;padding:0.2em 0.5em;font-size:80%;background:#cecece;}.tab2{margin-left:2em;padding:0.2em 0.5em;font-size:80%;background:#fbfbfb;}/* safari */summary::-webkit-details-marker {display:none;}/* mediaquery */@media only screen and (orientation: portrait){*{overflow-x:hidden !important;}html{width:100vw;overflow-x:hidden !important;}header{padding:50px 0 0 0;margin:0;width:100%;overflow-x:hidden !important;position:fixed;top:0;left:0;right:0;}#menu{padding-left:10px;}body{padding:120px 0 0 0;margin:0;;width:100%;font-size:90%;overflow-x:hidden !important;}#chat-log{width:90vw;overflow-x:hidden !important;margin:20px 0 20px 15px;}#chat-log div{word-break:break-all;overflow-x:hidden !important;padding-right:0;}.chat > div:nth-child(2){margin-left:0;overflow-x:hidden;}.hide-user b,.hide-user2 b{ margin-left:0em; }[id^="index"]{margin-top:-120px;padding-top:120px;}}</style>
 <script>$(function(){$(document).on('click','#tab-all,#user-all',function(){let tgt = $(this).attr('id').replace('-all','');let result = true;if( $(this).hasClass('hide') ){ result = false; }$('input[name="' + tgt + '"]').prop('checked',result);$(this).toggleClass('show hide');chatShowHide();});});$(function(){$(document).on('change','[name="user"],[name="tab"]',function(){ chatShowHide(); });});function chatShowHide(){$('.chat').show();let hide_list = [];$('[name="user"]:not(:checked),[name="tab"]:not(:checked)').each(function(){ hide_list.push('.' + $(this).attr('id').toLowerCase()); });hide_list = hide_list.join(',');$(hide_list).hide();$('#dice-output-area').html('').hide();$('.dice-output-area').hide();$('button.dice').removeClass('select');}</script>
 </head>
+
 <header>
+
 <details id="menu">
 <summary></summary>
+
 <div>
 <details>
 <summary>탭별 표시 전환</summary>
@@ -20,6 +23,7 @@
 <input type="checkbox" name="tab" id="TAB2" checked><label for="TAB2">비밀(식칼팽, 크로넬)</label><br>
 </div>
 </details>
+
 <details>
 <summary>발언자별 표시 전환</summary>
 <div>
@@ -46,6 +50,7 @@
 <input type="checkbox" name="user" id="USER19" checked><label for="USER19">누군가?</label><br>
 </div>
 </details>
+
 <details>
 <summary>목차</summary>
 <div>
@@ -59,6 +64,7 @@
 </div>
 </details>
 </header>
+
 <body>
 <div id="chat-log">
 
